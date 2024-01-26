@@ -1,8 +1,11 @@
-﻿namespace ShopiVerse.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ShopiVerse.Models
 {
     public class Customer
     {
-        public int CustomerId { get; set; }
+        [Key]
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public string City { get; set; }
