@@ -18,6 +18,11 @@ namespace ShopiVerse.Controllers
             List<Customer> objCustomerList = _db.Customers.ToList();
             return View(objCustomerList);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
+
         [HttpPost]
         public IActionResult Create(Customer obj)
         {
