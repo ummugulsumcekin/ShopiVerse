@@ -13,5 +13,13 @@ namespace ShopiVerse.Data
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderDetail> OrderDetails { get; set; }
         public DbSet<Cart> Carts { get; set; }
-    }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Customer>().HasData(
+                new Customer { }
+                );
+        }
 }
+}
+
