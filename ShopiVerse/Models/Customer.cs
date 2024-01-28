@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace ShopiVerse.Models
 {
@@ -6,7 +7,9 @@ namespace ShopiVerse.Models
     {
         [Key]
         public int Id { get; set; }
+        
         public string Name { get; set; }
+       
         public string Surname { get; set; }
         public string City { get; set; }
         public string District { get; set; }
